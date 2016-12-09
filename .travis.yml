@@ -1,2 +1,9 @@
 language: java
 dist: trusty
+addons:
+  sonarqube:
+    token:
+      secure: "QcI80+bg4BLO9PNP+BJcq+SZWntmPk8ESkrsAhSxZamgh23fIJs+1eJNHb/h4jlrOTvAZElE9fjq3KpEvpUos051LpbwvGh2NZ0Ch6dFngpAzzER2/lpL5cLAc5h5Qp8QebL0bA+UTRhfKzQ2PU31ilQdyRlDyCmIgWMcEEwHv3HcSRgHIbZ9ydxYR6iNiM/8ypFNG4ag5pnUjwuE8j4YCMRgjDkDPcvsHANbZN3ZCRqiiTcr1ALzl25781VsIHu1xT3OPBdvuOLAfwV6crb8h+Q0gXUxV7uE/WT045kHIx7quAIxVKFnpwQmi0G4OrnRm6oxHkDJXa+7MauW5t92dN/qIuUk/p+J0vgF6m1bPMpAdUNkBnhKzwdxHmpH3/AOTySGlXLaZZ90Zl2TLzxcLW+j+WxVzsmP5zkRmlvt7v8Acv2JePXWwxk/3DdebybBZkhSuv5TivkjvN27/sWpdL0fwmaRWOLkf+EPEl1CbfWlzHO6YcsF8B0VTMQ4aDgDh4NYGclmTOE5D4SoZLraFiLZqiZvMv3f7CPWhIHLQa//bSZjLTRL95F1VrISkQNkMRV7MEANxs+/4QzOeIzoUD+RYyAZ8FKmxofoAmuD5F0d4FrTKqXkvqhsT8IBBv3fSMAZcFQFVxQD+xpr+Y1QS9tYgNph4Qe8oQLM/vAOCU=" # encrypted value of your token
+script:
+  # other script steps might be done before running the actual SonarQube analysis
+  - sonar-scanner
